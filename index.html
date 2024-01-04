@@ -5,18 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bootcamp-devjr-projeto-modulo2</title>
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        input {
+            width: 70%;
+            height: 7px;
+            padding: 0.7rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 0;
+            margin: 10px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 10px #009E9E;
+        }
+
+        .container {
+
+            background-color: #481750;
+            margin: auto;
+
+            /* Largura fixa */
+            width: 700px;
+
+            /* box-shadow: 0px 0px 0xp 0px rgba(0, 0, 0, 0); PADRÂO*/
+            box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.2);
+
+            border-radius: 5px;
+
+            overflow: hidden;
+        }
+
+        .container-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: space-around;
+            background-color: #6f1e7e;
+            margin: auto;
+
+            /* Largura fixa */
+            width: 650px;
+
+            /* box-shadow: 0px 0px 0xp 0px rgba(0, 0, 0, 0); PADRÂO*/
+            box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.2);
+
+            border-radius: 5px;
+
+            overflow: hidden;
+        }
+
+        .header {
+            /* 1rem(16px) */
+            padding: 0.93rem;
+            text-align: center;
+        }
+
+        .header-title {
+            color: #FECD23;
+            /* 1rem(16px) */
+            font-size: 1.8rem;
+            font-weight: 600;
+            /* 1rem(16px) */
+            margin-bottom: 1.25rem;
+        }
+
+        .header-title-2 {
+            color: #FFFFFF;
+            /* 1rem(16px) */
+            font-size: 1.55rem;
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .header-subtitle,
+        .header-subtitle-2,
+        .header-subtitle-3 {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 15px;
+            color: #FFFFFF;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .cards>div {
+            background-color: #4C7DF3;
+            width: 150px;
+            height: 230px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            margin: 20px;
+            border-style: solid;
+            border-radius: 10px;
+            border-width: 10px;
+            border-color: #2637DA;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        button {
+            width: 90px;
+            height: 40px;
+            background-color: #1D0C20;
+            border: none;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #009E9E;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .text-col {
+            margin-top: 10px;
+            font-size: 21px;
+            font-weight: 400;
+            color: #f5f5f5;
+        }
+
+        span {
+            font-size: 15px;
+            color: #f5f5f5;
+        }
+
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- A imagem tem 2 Linhas, a segunda Linha tem 2 colunas -->
+        <!-- A imagem tem 2 Linhas, a segunda Linha 2 inputs e tem 3 colunas -->
         <div class="header">
             <div class="header-title">
                 GAMES LOVERS ENQUETE
             </div>
             <div class="header-subtitle">
-                Estamos escolhendo nessa enquete os melhores estilos de jogos entre os afixionados por <br>
-                video games. Participe da nossa enquete e escolha entre os três finalistas!
+                Estamos escolhendo nessa enquete os melhores estilos de jogos entre os afixionados por
+                video games. <br> Participe da nossa enquete e escolha entre os três finalistas!
             </div>
             <div class="header-subtitle-2">
                 A sua escolha é muito importante para nós.
@@ -25,56 +177,71 @@
                 No final da enquete iremos sortear um brinde entre os participantes.
             </div>
         </div>
+
+        <div class="container-2">
+
+            <div class="header-title-2">
+                Digite os seus dados e escolha entre os três finalistas!
+            </div>
+
+            <div class="input">
+                <input type="text" placeholder="Digite seu nome">
+                <input type="email" placeholder="Digite seu email">
+            </div>
+
+            <div class="cards">
+                <div class="col-1">
+                    <div class="text-col">
+                        Esportes
+                    </div>
+
+                    <div>
+                        <object data="assets/sports_soccer_white.svg" type="image/svg+xml"></object>
+                    </div>
+
+                    <a href="">
+                        <button><span>Voltar</span></button>
+                    </a>
+                </div> <!-- col-1 -->
+
+                <div>
+                    <div class="text-col">
+                        Simulação
+                    </div>
+
+                    <div class="image">
+                        <object data="assets/local_airport_white.svg" type="image/svg+xml"></object>
+                    </div>
+
+                    <a href="">
+                        <button><span>Voltar</span></button>
+                    </a>
+                </div> <!-- col-2 -->
+
+                <div class="col-3">
+                    <div class="text-col">
+                        Estratégia
+                    </div>
+
+                    <div>
+                        <object data="assets/psychology_white.svg" type="image/svg+xml"></object>
+                    </div>
+
+                    <a href="">
+                        <button><span>Voltar</span></button>
+                    </a>
+                </div> <!-- col-3 -->
+
+            </div>
+
+
+
+        </div> <!-- flex-container -->
+
+        <footer>@Desenvolvido por Fábio Melo</footer>
+
     </div>
 
-    <div class="flex-container">
-
-        <div class="class row">
-            <input type="text">
-            <input type="email">
-        </div>
-
-        <div class="col-1">
-            <div>
-                Esportes
-            </div>
-            <div>
-                imagem
-            </div>
-
-            <a href="">
-                <button>Voltar</button>
-            </a>
-        </div>
-
-        <div class="col-2">
-            <div>
-                Simulação
-            </div>
-            <div>
-                imagem
-            </div>
-
-            <a href="">
-                <button>Voltar</button>
-            </a>
-        </div>
-
-        <div class="col-3">
-            <div>
-                Estratégia
-            </div>
-            <div>
-                imagem
-            </div>
-
-            <a href="">
-                <button>Voltar</button>
-            </a>
-        </div>
-    </div>
-
-    <footer>@Desenvolvido por Fábio Melo</footer>
 </body>
 
 </html>
